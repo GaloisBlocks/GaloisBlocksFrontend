@@ -1,4 +1,5 @@
 <script>
+  import "iconify-icon";
   function dragMe(node) {
     let moving = false;
     let left = 50;
@@ -31,14 +32,33 @@
       moving = false;
     });
   }
+  function drop(event,index){
+    console.log(event)
+  }
+  let list = [1,2,3,4,5]
 </script>
 
 <div class="menu-window" use:dragMe>
   <div id="menu-drag-sel">Object Selection</div>
-  <div class="menu-objs" />
+  <div class="menu-objs-box">
+    <div class="menu-objs">
+      {#each list as index}
+        <iconify-icon
+          draggable="true"
+          class="icon"
+          icon="mdi:home"
+        />
+      {/each}
+    </div>
+  </div>
 </div>
 
 <style>
+  .icon {
+    font-size: 40px;
+    height: 40px;
+    background: transparent;
+  }
   .menu-window {
     border: dashed 1px rgb(0, 0, 0);
     background-color: rgb(192, 192, 192);
@@ -46,18 +66,27 @@
     font-size: 10pt;
     font-family: Verdana;
     color: #000;
-    width: 10vw;
+    width: clamp(150px, 10vw, 10vw);
     height: 90%;
   }
-  .menu-objs {
-    width: 90%;
+  .menu-objs-box {
+    width: 85%;
     height: 95%;
     background-color: rgb(255, 255, 255);
     border: solid 1px rgb(0, 0, 0);
     margin: auto;
+    border-top: none;
+  }
+  .menu-objs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    justify-content: left;
   }
   #menu-drag-sel {
     background-color: rgb(123, 123, 123);
     border: solid 1px rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 </style>
