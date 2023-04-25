@@ -72,7 +72,7 @@
   }
   .menu-window {
     box-shadow: 0px 0px 3px 3px rgba(0, 23, 14, 0.314);
-    background-color: rgba(192, 192, 192, 0.303);
+    background-color: rgba(85, 164, 255, 0.629);
     border-radius: 5px;
     font-size: 11pt;
     font-family: 'Product Sans Medium';
@@ -85,7 +85,7 @@
     cursor: default;
     width: 85%;
     height: 95%;
-    background-color: rgba(224, 174, 65, 0.297);
+    background-color: rgba(0, 24, 110, 0.616);
     border: solid 1px rgb(0, 0, 0);
     margin: auto;
     border-top: none;
@@ -97,10 +97,9 @@
     justify-content: left;
   }
   #menu-drag-sel {
-    background-color: rgba(224, 224, 224, 0.413);
+    background-color: rgba(123, 123, 123, 0.197);
     border: solid 1px rgb(0, 0, 0);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    cursor: grab;
   }
 </style>

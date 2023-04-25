@@ -68,7 +68,7 @@
 <style>
   @import url('https://fonts.cdnfonts.com/css/google-sans');
   .object-block {
-    background-color: rgba(255, 229, 127, 0.731);
+    background-color: rgba(204, 0, 197, 0.644);
     border-radius: 20px;
     font-size: 11pt;
     font-family: 'Product Sans Medium';
@@ -93,8 +93,9 @@
     transition: 0.1s;
   }
   .object-place:hover {
-    box-shadow: 0px 0px 1px 1px rgb(255, 221, 0);
-    background-color: rgba(197, 250, 255, 0.847);
+    box-shadow: 0px 0px 1px 1px rgb(32, 181, 255);
+    border: 0.5px dashed rgb(32, 181, 255);
+    background-color: rgba(168, 243, 255, 0.847);
   }
   .object-place-name {
     width: 80%;
@@ -105,7 +106,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #000;
+    color: #fff;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
