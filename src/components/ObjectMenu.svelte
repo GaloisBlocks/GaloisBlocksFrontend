@@ -56,25 +56,36 @@
 </div>
 
 <style>
+  @import url('https://fonts.cdnfonts.com/css/google-sans');
   .icon {
     font-size: 40px;
     height: 40px;
-    background: transparent;
+    outline: 1px solid black;
+    border-radius: 3px;
+    margin-top: 1px;
+    margin-left: 1px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .icon:hover{
+    background: rgba(0, 255, 255, 0.286);
   }
   .menu-window {
-    border: dashed 1px rgb(0, 0, 0);
-    background-color: rgb(192, 192, 192);
+    box-shadow: 0px 0px 3px 3px rgba(0, 23, 14, 0.314);
+    background-color: rgba(192, 192, 192, 0.303);
     border-radius: 5px;
-    font-size: 10pt;
-    font-family: Verdana;
+    font-size: 11pt;
+    font-family: 'Product Sans Medium';
     color: #000;
     width: clamp(150px, 10vw, 10vw);
     height: 90%;
   }
   .menu-objs-box {
+
+    cursor: default;
     width: 85%;
     height: 95%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(224, 174, 65, 0.297);
     border: solid 1px rgb(0, 0, 0);
     margin: auto;
     border-top: none;
@@ -86,9 +97,10 @@
     justify-content: left;
   }
   #menu-drag-sel {
-    background-color: rgb(123, 123, 123);
+    background-color: rgba(224, 224, 224, 0.413);
     border: solid 1px rgb(0, 0, 0);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    cursor: grab;
   }
 </style>

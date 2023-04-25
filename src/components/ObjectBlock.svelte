@@ -66,33 +66,35 @@
 </div>
 
 <style>
+  @import url('https://fonts.cdnfonts.com/css/google-sans');
   .object-block {
-    border: dashed 1px rgb(0, 0, 0);
-    background-color: rgba(0, 81, 49, 0.316);
-    border-radius: 5px;
-    font-size: 10pt;
-    font-family: Verdana;
+    background-color: rgba(255, 229, 127, 0.731);
+    border-radius: 20px;
+    font-size: 11pt;
+    font-family: 'Product Sans Medium';
     min-width: clamp(200px, 15vh, 15vh);
     color: #000;
     min-width: clamp(200px, 15vw, 15vw);
     position: absolute;
+    box-shadow: 0px 0px 3px 3px rgba(0, 23, 14, 0.314);
   }
   #object-block-sel {
-    background-color: rgb(123, 123, 123);
+    cursor: grab;
+    background-color: rgba(224, 224, 224, 0.597);
     border: solid 1px rgb(0, 0, 0);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   .object-place {
     min-width: 150px;
     min-height: 150px;
     background-color: rgba(168, 243, 255, 0.427);
-    border-radius: 5px;
-    transition: 0.2s;
+    border-radius: 20px;
+    transition: 0.1s;
   }
   .object-place:hover {
-    box-shadow: 0px 0px 1px 1px rgb(32, 181, 255);
-    border: 0.5px dashed rgb(32, 181, 255);
+    box-shadow: 0px 0px 1px 1px rgb(255, 221, 0);
+    background-color: rgba(197, 250, 255, 0.847);
   }
   .object-place-name {
     width: 80%;
@@ -103,7 +105,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: #000;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
