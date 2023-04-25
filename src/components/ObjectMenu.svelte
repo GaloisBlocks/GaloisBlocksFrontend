@@ -45,6 +45,8 @@
       {#each list as index}
         <iconify-icon
           draggable="true"
+          on:drop|preventDefault={(event) => drop(event, index)}
+          on:dragover|preventDefault
           class="icon"
           icon="mdi:home"
         />

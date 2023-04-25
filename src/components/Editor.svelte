@@ -1,6 +1,18 @@
 <script>
   import ObjectMenu from "./ObjectMenu.svelte";
   import ObjectBlock from "./ObjectBlock.svelte";
+  import {dragging} from '../js/stores';
+  let draggedElement;
+  dragging.subscribe((value)=>{draggedElement = value})
+  const dropped = (event)=>{
+    event.target.appendChild(draggedElement)
+  }
+  function handleDragOver(event) {
+    event.target.addEventListener('mouseup',dropped)
+  }
+  function handleDragLeave(event){
+    event.target.removeEventListener('mouseup',dropped)
+  }
   let editor;
   let blockList = [];
   const addBlock = (posX, posY) => {
@@ -16,6 +28,9 @@
     addBlock(event.layerX, event.layerY);
   }}
   on:dragover|preventDefault
+  on:focus={()=>{}}
+  on:mouseover={handleDragOver}
+  on:mouseleave={handleDragLeave}
 >
   {#each blockList as props}
     <ObjectBlock props={props} />
