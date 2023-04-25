@@ -22,6 +22,7 @@
     window.addEventListener("mouseup",()=>{ event.target.dispatchEvent(new Event("dragend"))});
   }
   const dropped = (event)=>{
+    console.log({target: event.target})
     event.target.appendChild(draggedElement)
     draggedElement.style.position = "static"
   }
@@ -71,9 +72,9 @@
     border-radius: 5px;
     font-size: 10pt;
     font-family: Verdana;
-    height: 200px;
+    min-width: clamp(200px, 15vh, 15vh);
     color: #000;
-    width: clamp(200px, 15vw, 15vw);
+    min-width: clamp(200px, 15vw, 15vw);
     position: absolute;
   }
   #object-block-sel {
@@ -83,9 +84,9 @@
     border-top-right-radius: 5px;
   }
   .object-place {
-    width: 80%;
-    height: 60%;
-    background-color: rgb(168, 243, 255);
+    min-width: 150px;
+    min-height: 150px;
+    background-color: rgba(168, 243, 255, 0.427);
     border-radius: 5px;
     transition: 0.2s;
   }
@@ -102,8 +103,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 80%;
     color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
   }
 </style>
